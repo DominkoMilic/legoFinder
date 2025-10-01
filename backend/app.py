@@ -12,9 +12,6 @@ CORS(app)
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
-with open("sets.json") as f:
-    sets_mapping = json.load(f)
-
 def extract_character_name(text_output):
     if text_output:
         return text_output.split()[0]
